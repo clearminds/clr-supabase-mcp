@@ -32,3 +32,13 @@ ALL_MODULE_NAMES = ("core", "sql", "auth", "storage", "edge")
 def _register_module(name: str, tools: list[Callable[..., Any]]) -> None:
     """Register a list of tool functions under a module name."""
     MODULES[name] = tools
+
+
+# Import all tool modules so they self-register via _register_module().
+from clr_supabase_mcp.tools import (  # noqa: E402, F401
+    auth,
+    core,
+    edge,
+    sql,
+    storage,
+)
