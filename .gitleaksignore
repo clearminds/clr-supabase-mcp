@@ -1,0 +1,7 @@
+# Truncated JWT header in the README installation example.
+# "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" is the base64 of
+# {"alg":"HS256","typ":"JWT"} -- identical in every JWT ever issued --
+# followed by an ellipsis. It sits beside supabase.example.com and
+# your-db-password. gitleaks' generic-api-key rule matches the shape, not a
+# real credential.
+3dfdeceebe1f1032a851730ff8a83ad960c1b0a5:README.md:generic-api-key:66
